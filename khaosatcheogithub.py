@@ -257,7 +257,8 @@ with open("test.csv", encoding="utf-8-sig") as file:
     row = reader[index]
 time.sleep(1)
 
-driver.get('')
+driver.get('https://docs.google.com/forms/d/e/1FAIpQLSeQERSdPsc8Kh3SV92kOhjc1d9qLyA4X0z6JgMaxa5OgvKyhQ/viewform')
+fill_form(row[0],0)
 next_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div')))
 driver.execute_script("arguments[0].click();", next_button)
 
